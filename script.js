@@ -1,6 +1,6 @@
 const baseUrl = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies"
 const dropdown = document.querySelectorAll(".selectContainer select")
-const enteredValue = document.querySelector("#input").value
+
 const from = document.querySelector(".from select")
 const to = document.querySelector(".to select")
 const output = document.querySelector("#output")
@@ -27,7 +27,28 @@ for(let select of dropdown){
 }
 
 
-let newUrl
+const update = async () => {
+    
+    const enteredValue = document.querySelector("#input").value
+    if(enteredValue === "" || enteredValue < 1){
+        enteredValue = 1
+        enteredValue.value = "1"
+    }
+
+    let newUrl = `${baseUrl}/${from.value.toLowerCase()}/${to.value.toLowerCase()}.json`
+    let response = await fetch(newUrl)
+    let data = await response.json()
+    let rate = data[to.value.toLowerCase()]
+    let finamlAmount = (enteredValue * rate).toFixed(2)
+
+    output.innerText = finamlAmount
+}
+
+
+window.addEventListener("load", () => {
+    update()
+})
+
 
 const updateFlag = (e) => {
     const currCode = e.value
@@ -38,18 +59,23 @@ const updateFlag = (e) => {
 }
 
 
-let getResponse = async () => {
-    newUrl = `${baseUrl}/${from.value.toLowerCase()}/${to.value.toLowerCase()}.json`
+
+
+submit.addEventListener('click', async (e) => {
+    e.preventDefault()
+    const enteredValue = document.querySelector("#input").value
+    if(enteredValue === "" || enteredValue < 1){
+        enteredValue = 1
+        enteredValue.value = "1"
+    }
+    
+    let newUrl = `${baseUrl}/${from.value.toLowerCase()}/${to.value.toLowerCase()}.json`
     let response = await fetch(newUrl)
     let data = await response.json()
-    let ans = data[to.value.toLowerCase()]
-    output.innerHTML = Math.round(ans * enteredValue)
+    let rate = data[to.value.toLowerCase()]
+    let finamlAmount = (enteredValue * rate).toFixed(2)
 
-}
-
-submit.addEventListener('click', (e) => {
-    e.preventDefault()
-    getResponse()
-    
+    output.innerText = finamlAmount
+       
 })
 
