@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #FFE4C9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 96vh;
+    padding: 2vh;
+    background: linear-gradient(130deg, #FFE6E6, #7469B6);
+}
+
+
+.container{
+    background-color: white;
+    width: 20rem;
+    height: 26rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1rem 1rem 2rem #707070;
+}
+
+.container #name{
+    font-size: 2rem;
+    color: #9195F6;
+}
+
+.enterAmount{
+    /* background-color: aqua; */
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.enterAmount p{
+    font-size: 1.2rem;
+    color: #505050;
+    margin-bottom: 0.2rem;
+}
+
+#input{
+    width: 16rem;
+    height: 2.5rem;
+    padding: 0 0.6rem;
+    font-size: 1.2rem;
+    color: #505050;
+    border: 0.09rem solid rgb(112, 112, 112);
+    border-radius: 0.4rem;
+}
+
+.conversion{
+    /* background-color: aliceblue; */
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.from{
+    display: flex;
+    flex-direction: column;
+    color: #505050;
+}
+
+.to{
+    display: flex;
+    flex-direction: column;
+    color: #505050;
+}
+
+#icon{
+    margin-top: 1rem;
+    font-size: 1.3rem
+}
+
+.selectContainer{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.09rem solid #707070;
+    /* padding: 0.2rem; */
+    border-radius: 0.3rem;
+    background-color: white;
+    width: 5.6rem;
+    
+}
+.selectContainer img{
+    height: 1.6rem;
+
+}
+
+#one, #two{
+    border: none;
+    color: #505050;
+    margin-left: 0.4rem;
+    
+}
+
+.amount{
+    /* background-color: #d79e9e; */
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 2rem;
+    color: #505050;
+    font-size: 1.2rem;
+}
+
+.amount p{
+    margin-left: 0.3rem;
+}
+
+.result{
+    /* background-color: aqua; */
+    width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#submit{
+    height: 2.5rem;
+    width: 17rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #9195F6;
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: 0.1rem 0.1rem 0.4rem #717171;
+}
+
+#submit:hover{
+    transition: 0.3s;
+    scale: 0.9;
+    background-color: white;
+    color: #9195F6;
+    border: 0.1rem solid #707070;
+}
+#submit:active{
+    /* transition: 2s; */
+    scale: 1;
+    background-color: #9195F6;
+    color: white;
+    border: none;
+}
