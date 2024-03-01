@@ -1,0 +1,79 @@
+@media only screen and (max-width : 720px) {
+  
+   
+
+  .container{
+    filter: blur(1);
+    background-color: white;
+    width: 60vw;
+    height: 70vh;
+  }
+
+  .container #name{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #9195F6;
+    text-shadow: 0.1rem 0.1rem 0.3rem #707070;
+ }
+
+ .enterAmount{
+  /* background-color: aqua; */
+  align-items: center;
+  width:80%;
+  }
+
+  #input{
+    width: 88%;
+    height: 2.5rem;
+    padding: 0 0.6rem;
+    
+}
+
+.conversion{
+  /* background-color: aliceblue; */
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.to{
+  margin-top: 1rem;
+}
+
+
+.amount{
+  /* background-color: #d79e9e; */
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.amount p{
+  margin-left: none;
+  text-align: center;
+}
+
+.result{
+  /* background-color: aquamarine; */
+  width: 100%;
+}
+
+#submit{
+  
+  height: 2.5rem;
+  width: 80%;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #9195F6;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: 0.1rem 0.1rem 0.4rem #717171;
+}
+
+
+}
