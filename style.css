@@ -9,7 +9,7 @@ body{
     justify-content: center;
     min-height: 96vh;
     padding: 2vh;
-    background: linear-gradient(130deg, #FFE6E6, #7469B6);
+    background: linear-gradient(45deg, #F5DD61, #344955);
 }
 
 
@@ -29,6 +29,7 @@ body{
 .container #name{
     font-size: 2rem;
     color: #9195F6;
+    text-shadow: 0.1rem 0.1rem 0.3rem #707070;
 }
 
 .enterAmount{
@@ -70,17 +71,20 @@ body{
     display: flex;
     flex-direction: column;
     color: #505050;
+    /* background-color: #40A2E3; */
 }
 
 .to{
     display: flex;
     flex-direction: column;
     color: #505050;
+    /* background-color: #40A2E3; */
 }
 
 #icon{
     margin-top: 1rem;
     font-size: 1.3rem
+    /* background-color: #40A2E3; */
 }
 
 .selectContainer{
